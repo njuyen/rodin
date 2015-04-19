@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/SortedArray/Array.bcc" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.seesContext#("/>
+<org.eventb.core.scInternalContext name="Array">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="SIZE_def" org.eventb.core.predicate="SIZE∈ℕ1" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="ARRAY_def" org.eventb.core.predicate="ARRAY∈1 ‥ SIZE → ℤ" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="ARRAY" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.scConstant name="SIZE" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scEvent name="Arraz" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
+<org.eventb.core.scEvent name="Arra{" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IS_SORTED" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#)">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="is_sorted" org.eventb.core.predicate="∀i⦂ℤ·i∈dom(ARRAY)∧i+1∈dom(ARRAY)⇒ARRAY(i)≤ARRAY(i+1)" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#)|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="Arra|" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IS_NOT_SORTED" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#*">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="is_not_sorted" org.eventb.core.predicate="∃i⦂ℤ·i∈dom(ARRAY)∧i+1∈dom(ARRAY)⇒ARRAY(i)&gt;ARRAY(i+1)" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#*|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

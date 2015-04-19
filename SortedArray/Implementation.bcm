@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/SortedArray/Specification.bcm" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.refinesMachine#)"/>
+<org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/SortedArray/Array.bcc" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.seesContext#("/>
+<org.eventb.core.scInternalContext name="Array">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="SIZE_def" org.eventb.core.predicate="SIZE∈ℕ1" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="ARRAY_def" org.eventb.core.predicate="ARRAY∈1 ‥ SIZE → ℤ" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="ARRAY" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.scConstant name="SIZE" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="Arraz" org.eventb.core.label="index_def" org.eventb.core.predicate="index∈1 ‥ SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="index" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.variable#," org.eventb.core.type="ℤ"/>
+<org.eventb.core.scEvent name="indey" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#'">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/SortedArray/Specification.bcm|org.eventb.core.scMachineFile#Specification|org.eventb.core.scEvent#Arraz" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#'"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="index ≔ 1" org.eventb.core.label="index_init" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#'|org.eventb.core.action#'"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="indez" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IS_SORTED" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#*">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/SortedArray/Specification.bcm|org.eventb.core.scMachineFile#Specification|org.eventb.core.scEvent#Arra{" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#*|org.eventb.core.refinesEvent#'"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="index=SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#*|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="inde{" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IS_NOT_SORTED" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#+">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/SortedArray/Specification.bcm|org.eventb.core.scMachineFile#Specification|org.eventb.core.scEvent#Arra\|" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#+|org.eventb.core.refinesEvent#)"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="ARRAY(index)&gt;ARRAY(index+1)" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#+|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="index&lt;SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#+|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="inde|" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INDEX_INCREMENT" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#.">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="index&lt;SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#.|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="index ≔ index+1" org.eventb.core.label="index_increase" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#.|org.eventb.core.action#("/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

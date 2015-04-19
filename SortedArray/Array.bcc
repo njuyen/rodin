@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="SIZE_def" org.eventb.core.predicate="SIZE∈ℕ1" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="ARRAY_def" org.eventb.core.predicate="ARRAY∈1 ‥ SIZE → ℤ" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="ARRAY" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#(" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.scConstant name="SIZE" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scContextFile>

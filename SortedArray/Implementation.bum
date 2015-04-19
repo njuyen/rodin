@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="index ≔ 1" org.eventb.core.label="index_init"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Array"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="Specification"/>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IS_SORTED">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="IS_SORTED"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="index = SIZE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IS_NOT_SORTED">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="ARRAY(index) &gt; ARRAY(index+1)"/>
+<org.eventb.core.refinesEvent name=")" org.eventb.core.target="IS_NOT_SORTED"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="index &lt; SIZE"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="," org.eventb.core.identifier="index"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="index_def" org.eventb.core.predicate="index ∈ 1‥SIZE"/>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INDEX_INCREMENT">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="index &lt; SIZE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="index ≔ index + 1" org.eventb.core.label="index_increase"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

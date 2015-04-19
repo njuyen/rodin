@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="ARRAY" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="SIZE" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="ARRAZ" org.eventb.core.predicate="SIZE∈ℕ1" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="ARRA[" org.eventb.core.predicate="ARRAY∈1 ‥ SIZE → ℤ" org.eventb.core.source="/SortedArray/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poIdentifier name="index" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/index_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#EVTALLHYPindey"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈1 ‥ SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poSequent#INITIALISATION\/index_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTindey" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="index'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPindey" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#EVTIDENTindey" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="IS_SORTED/is_sorted/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#EVTALLHYPindez"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈dom(ARRAY)∧i+1∈dom(ARRAY)⇒ARRAY(i)≤ARRAY(i+1)" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#)|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#)"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#)|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#*"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poSequent#IS_SORTED\/is_sorted\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTALLHYPindez" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="index=SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#*|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="IS_NOT_SORTED/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="index∈dom(ARRAY)∧ARRAY∈ℤ ⇸ ℤ∧index+1∈dom(ARRAY)" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#+|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#+|org.eventb.core.guard#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="IS_NOT_SORTED/is_not_sorted/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#EVTALLHYPinde{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃i⦂ℤ·i∈dom(ARRAY)∧i+1∈dom(ARRAY)⇒ARRAY(i)&gt;ARRAY(i+1)" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#*|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#*"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/SortedArray/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#*|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#+"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poSequent#IS_NOT_SORTED\/is_not_sorted\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTALLHYPinde{" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ARRAY(index)&gt;ARRAY(index+1)" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#+|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="index&lt;SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#+|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INDEX_INCREMENT/index_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#EVTALLHYPinde\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="index+1∈1 ‥ SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poSequent#INDEX_INCREMENT\/index_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTinde|" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="53">
+<org.eventb.core.poIdentifier name="index'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPinde|" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#EVTIDENTinde\|" org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="index&lt;SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.event#.|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/SortedArray/Implementation.bpo|org.eventb.core.poFile#Implementation|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="53">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="index∈1 ‥ SIZE" org.eventb.core.source="/SortedArray/Implementation.bum|org.eventb.core.machineFile#Implementation|org.eventb.core.invariant#-"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
